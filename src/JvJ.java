@@ -29,7 +29,7 @@ public class JvJ {
         }
     }
 
-    public static boolean insererPion(char[][] plateau, int C, char  pion) {
+    public static boolean insererPion(char[][] plateau, int C, char pion) {
         if (C < 0 || C >= plateau[0].length) {
             System.out.println("Colonne invalide !");
             return false;
@@ -119,12 +119,12 @@ public class JvJ {
             System.out.println("Joueur " + joueur + ", choisissez une colonne (1 à 7) : ");
             int colonne = scanner.nextInt() - 1; // Décalage pour l'index du tableau
             String pion;
-            if(joueur == 1) {
+            if (joueur == 1) {
                 pion = 'R' + RED;
             } else {
                 pion = 'J' + RED;
             }
-
+/*
             if (insererPion(plateau, colonne, pion)) {
                 // Vérifier si le joueur a gagné
                 if (verifierVictoire(plateau, pion)) {
@@ -141,7 +141,9 @@ public class JvJ {
                 }
             }
         }
-    }
+        */
+
+        }
 
    /*public static void JvC1(char[][] plateau) {
         Scanner scanner = new Scanner(System.in);
@@ -153,4 +155,5 @@ public class JvJ {
 
         }
     }*/
+    }
 }
