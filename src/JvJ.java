@@ -158,6 +158,10 @@ public class JvJ {
         }
     }
 
+    public static void ajoutMege() {
+        System.out.println("ihvruibvubve");
+    }
+
 }
 
 
