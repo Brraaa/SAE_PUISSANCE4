@@ -109,6 +109,7 @@ public class JvJ {
                 verifierAlignementDiagonalBasDroitHautGauche(plateau, pion);
     }
 
+
     public static void jouer(char[][] plateau) {
         Scanner scanner = new Scanner(System.in);
         int joueur = 1;  // Le joueur 1 commence
@@ -124,7 +125,7 @@ public class JvJ {
             } else {
                 pion = 'J' + RED;
             }
-/*
+            /*
             if (insererPion(plateau, colonne, pion)) {
                 // Vérifier si le joueur a gagné
                 if (verifierVictoire(plateau, pion)) {
@@ -140,12 +141,13 @@ public class JvJ {
                 }
                 }
             }
+            */
         }
-        */
+
 
         }
 
-   /*public static void JvC1(char[][] plateau) {
+   public static void JvC1(char[][] plateau) {
         Scanner scanner = new Scanner(System.in);
         int joueur = 1;  // Le joueur 1 commence
         boolean partieFinie = false;
@@ -154,6 +156,8 @@ public class JvJ {
             afficherPlateau(plateau);
 
         }
-    }*/
     }
+
 }
+
+

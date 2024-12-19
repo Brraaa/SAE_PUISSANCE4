@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Menu.afficherMenu();
-        System.out.print("ezjkezfezf");
+        System.out.println("AjoutCouleur");
     }
 
 
