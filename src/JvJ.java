@@ -8,9 +8,9 @@ public class JvJ {
         initialiserPlateau(plateau);  // Initialiser le plateau
         jouer(plateau);  // Lancer la partie
     }*/
-
-    public static final String RED = "\u001B[38;5;88m";
-
+    public static final String RESET = "\u001B[0m";
+    public static final String ROUGE = "\u001B[31m";
+    public static final String JAUNE = "\u001B[33m";
     public static void initialiserPlateau(char[][] plateau) {
         for (int i = 0; i < plateau.length; i++) {
             for (int j = 0; j < plateau[i].length; j++) {
@@ -23,7 +23,14 @@ public class JvJ {
         System.out.println("\n=== Plateau ===");
         for (int i = 0; i < plateau.length; i++) {
             for (int j = 0; j < plateau[i].length; j++) {
-                System.out.print(" " + plateau[i][j] + " ");
+                // Afficher les pions avec des couleurs
+                if (plateau[i][j] == '●') {
+                    System.out.print(" " + ROUGE + "●" + RESET + " ");
+                } else if (plateau[i][j] == '⬛') {
+                    System.out.print(" " + JAUNE + "⬛" + RESET + " ");
+                } else {
+                    System.out.print(" " + plateau[i][j] + " ");
+                }
             }
             System.out.println();
         }
@@ -118,13 +125,13 @@ public class JvJ {
             afficherPlateau(plateau);
             System.out.println("Joueur " + joueur + ", choisissez une colonne (1 à 7) : ");
             int colonne = scanner.nextInt() - 1; // Décalage pour l'index du tableau
-            String pion;
+            char pion;
             if (joueur == 1) {
-                pion = 'R' + RED;
+                pion = '●';
             } else {
-                pion = 'J' + RED;
+                pion = '⬛';
             }
-/*
+
             if (insererPion(plateau, colonne, pion)) {
                 // Vérifier si le joueur a gagné
                 if (verifierVictoire(plateau, pion)) {
@@ -138,22 +145,14 @@ public class JvJ {
                 } else {
                     joueur = 1;
                 }
+
                 }
             }
         }
-        */
 
-        }
 
-   /*public static void JvC1(char[][] plateau) {
-        Scanner scanner = new Scanner(System.in);
-        int joueur = 1;  // Le joueur 1 commence
-        boolean partieFinie = false;
 
-        while (!partieFinie) {
-            afficherPlateau(plateau);
 
-        }
-    }*/
+
     }
 }
